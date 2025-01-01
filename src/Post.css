@@ -1,0 +1,134 @@
+.post {
+    padding: 10px;
+    margin-bottom: 0px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Gap'ı küçülttüm */
+}
+
+.post-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-start;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.post-header h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.post-header .username {
+    font-weight: bold;
+}
+
+.post-header .timestamp {
+    color: black;
+    font-size: 13px;
+}
+
+.post-header .subreddit {
+    color: #0d0c0c;
+    font-size: 19px;
+    margin-top: 8px;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px; /* Margin ekledim */
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+    margin-bottom:5px;
+    padding: 5px;
+    display: flex; /* Flexbox ile ikon ve metin yan yana */
+    align-items: center;
+}
+
+.post-actions button:hover {
+    color: #0056b3;
+}
+
+.post-actions .icon {
+    margin-right: 5px; /* İkon ile metin arasına boşluk ekledim */
+}
+
+.message-section {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.messages {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.message {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.message-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.message-input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-container button span.material-icons {
+    vertical-align: middle;
+    font-size: 24px;
+    color: #0d0d0e;
+}
+
+.icon-container button:hover span.material-icons {
+    color: #081ae0;
+}
+
+.icon-container button:last-child span.material-icons {
+    color: #ff4b4b;
+}
+
+.icon-container button:last-child:hover span.material-icons {
+    color: #0400e6;
+}

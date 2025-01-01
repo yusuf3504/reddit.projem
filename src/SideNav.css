@@ -1,0 +1,99 @@
+/* SideNav.css */
+
+.SideNav {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+.SideNav-header {
+    display: flex;
+    align-items: center;
+   
+}
+
+.SideNav-logo img {
+    width: 150px; /* Mobil ekranlar için küçük logo */
+    margin-left: 10px; /* İkonun yanında boşluk bırak */
+}
+
+.SideNav-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* İkonun üstte olmasını sağla */
+}
+
+.SideNav-link {
+    display: block;
+    overflow-y: auto; /* Dikey kaydırma */
+    max-height: calc(100vh - 60px); /* Ekran yüksekliğine göre ayarla */
+    padding-right: 10px; /* Kaydırma çubuğu için boşluk bırak */
+    
+}
+
+.SideNav-link.open {
+    display: block;
+}
+
+/* Menü öğeleri arasına boşluk eklemek ve alt çizgiyi kaldırmak için güncellendi */
+.SideNav-menu li a,
+.SideNav-subreddit li a,
+.SideNav-resources li a,
+.SideNav-communities li a,
+.SideNav-policies li a {
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    margin-bottom: 10px; /* Araya 10px boşluk ekle */
+    display: inline-block;
+    color: #000;
+    margin-left: 10px;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .SideNav-header {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ccc; /* Alt çizgi */
+    }
+
+    .SideNav-link {
+        display: none;
+    }
+
+    .SideNav-toggle {
+        display: block;
+    }
+
+    .SideNav-link.open {
+        display: block;
+    }
+
+    .SideNav-logo img {
+        width: 90px; /* Mobil ekranlar için daha küçük logo */
+    }
+}
+
+/* Post kısmı için responsive stil */
+.post {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px 0; /* Postlar arasında boşluk */
+}
+
+.post img {
+    width: 100px;
+    height: auto;
+}
+
+@media (min-width: 769px) {
+    .post {
+        width: 60%;
+        margin: 0 auto;
+    }
+}

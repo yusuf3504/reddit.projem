@@ -1,0 +1,386 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    /* Ana scroll barı kaldırmak için */
+}
+
+.container {
+    display: flex;
+}
+
+/* App.css */
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-y: auto;
+    /* Dikey kaydırma */
+}
+
+.sidenav-container {
+    display: none;
+    /* Sadece mobil cihazlarda gösterilecek */
+}
+
+.content-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100vh;
+    /* Ekran yüksekliğine göre ayarla */
+    overflow-y: auto;
+    /* Dikey kaydırma */
+}
+
+.search-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.header-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 500px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    /* İkon için sağdan boşluk bırak */
+    border: 1px solid #000000;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    color: black;
+    cursor: pointer;
+    /* İkon tıklanamaz olacak */
+}
+
+
+.header-search .fas.fa-search {
+    margin-left: 0px;
+    color: #888;
+}
+
+.login-button {
+    padding: 10px 0px;
+    border: none;
+    background-color: #0fe7a6;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 0px;
+    width: 60px;
+}
+
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: auto;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 28px;
+    bottom: 10px;
+}
+
+.social-login {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.social-login.google {
+    color: #4285F4;
+    border: 1px solid #4285F4;
+}
+
+.social-login.phone {
+    color: #34A853;
+    border: 1px solid #34A853;
+}
+
+.social-login.apple {
+    color: #000;
+    border: 1px solid #000;
+}
+
+.email-login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.email-login input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    padding: 10px;
+    border: none;
+    background-color: #0079d3;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: #0079d3;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.post {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px auto;
+    /* Tüm ekranlarda üst ve alt boşluk */
+    gap: 20px;
+    /* Gönderiler arasındaki boşluk */
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    /* Görüntü oranlarını koru */
+}
+
+@media (max-width: 768px) {
+    .sidenav-container {
+        display: block;
+        /* Mobil cihazlarda gösterilecek */
+    }
+
+    .content-container {
+        margin: 0 5px;
+        /* Sağdan soldan 5px boşluk */
+    }
+
+    .post {
+        margin: 10px 0;
+        /* Postlar arasında boşluk */
+        max-width: 100%;
+        /* Mobilde tam genişlik */
+    }
+}
+
+@media (min-width: 769px) {
+    .sidenav-container {
+        display: block;
+        /* Masaüstünde görünecek */
+        flex: 0 0 250px;
+        /* Sabit genişlik */
+    }
+
+    .main-container {
+        flex-direction: row;
+    }
+
+    .content-container {
+        width: calc(100% - 250px);
+        /* SideNav genişliğini düş */
+        overflow-y: auto;
+        /* Dikey kaydırma sadece masaüstü için */
+    }
+
+    .header-search .input {
+        max-width: none;
+        /* Maksimum genişliği kaldır */
+    }
+
+    .post {
+        margin-bottom: 0px;
+        /* Postlar arasında boşluk */
+    }
+}
